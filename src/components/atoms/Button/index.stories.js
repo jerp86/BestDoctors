@@ -4,13 +4,15 @@ import { storiesOf } from '@storybook/react-native';
 import React from 'react';
 
 import { Button } from './index';
-import { Wrapper } from '../../wrapper';
+import { Container } from '../Container';
 
-storiesOf('Button', module)
-  .addDecorator(getStory => <Wrapper>{getStory()}</Wrapper>)
-  .add('Standard', () => {
-    const value = text('Text to the Button', 'Your Text in Button');
-    const outline = boolean('Outline', false);
+const story = storiesOf('Button', module);
 
-    return <Button outline={outline}>{value}</Button>;
-  });
+story.addDecorator(getStory => <Container>{getStory()}</Container>);
+
+story.add('Standard', () => {
+  const value = text('Text to the Button', 'Your Text in Button');
+  const outline = boolean('Outline', false);
+
+  return <Button outline={outline}>{value}</Button>;
+});
