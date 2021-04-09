@@ -1,25 +1,15 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
+import { ThemeProvider } from 'styled-components';
 
-import { Button, Title } from './components';
+import { theme } from './styles/theme';
+import Storybook from '../storybook';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.mainContainer}>
-      <Title />
-      <Button />
-    </SafeAreaView>
+    <ThemeProvider theme={theme}>
+      <Storybook />
+    </ThemeProvider>
   );
 };
-
-const styles = StyleSheet.create({
-  mainContainer: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'white',
-  },
-});
 
 export default App;
