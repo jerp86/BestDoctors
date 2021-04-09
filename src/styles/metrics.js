@@ -33,4 +33,5 @@ export const metrics = {
   wp,
   hp,
   px,
+  baseWidth: `${px(328)}`,
 };
