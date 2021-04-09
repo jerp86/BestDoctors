@@ -7,7 +7,7 @@ export const ButtonContainer = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
 
-  width: ${({ theme }) => theme.metrics.px(323)}px;
+  width: ${({ theme }) => theme.metrics.baseWidth}px;
   height: ${({ theme }) => theme.metrics.px(56)}px;
 
   border-radius: ${({ theme }) => theme.metrics.px(36)}px;
