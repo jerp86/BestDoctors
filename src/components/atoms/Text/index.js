@@ -31,8 +31,10 @@ export const RegularText = styled(BaseText)`
   color: ${({ theme }) => theme.colors.dark};
 `;
 
-export const InputLabel = styled(BaseText)`
+export const InputLabel = styled.Text`
   font-family: ${({ theme }) => theme.fonts.semiBold};
   font-size: ${({ theme }) => theme.metrics.px(14)}px;
   color: ${({ theme }) => theme.colors.primary};
+  padding: 0;
+  margin: 0;
 `;
