@@ -13,7 +13,11 @@ export const SelectTypeCard = ({ selected, title, description }) => {
 
       <TextView>
         <CardTitle>{title}</CardTitle>
-        <RegularText>{`${String(description).slice(0, 135)}...`}</RegularText>
+        <RegularText>
+          {String(description).length >= 135
+            ? `${String(description).slice(0, 135)}...`
+            : description}
+        </RegularText>
       </TextView>
     </CardContainer>
   );
