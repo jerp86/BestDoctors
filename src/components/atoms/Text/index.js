@@ -31,7 +31,7 @@ export const LinkText = styled(BaseText)`
 
 export const RegularText = styled(BaseText)`
   font-family: ${({ theme }) => theme.fonts.regular};
-  font-size: ${({ theme }) => theme.metrics.px(14)}px;
+  font-size: ${({ theme, size }) => theme.metrics.px(size || 14)}px;
   color: ${({ theme }) => theme.colors.dark};
 `;
 
