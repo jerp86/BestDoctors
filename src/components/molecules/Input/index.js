@@ -4,15 +4,15 @@ import { InputContainer, InputText } from './styles';
 
 import { InputLabel } from '../../atoms';
 
-export const Input = ({ label, ...rest }) => {
+export const Input = ({ label, placeholder, ...rest }) => {
   const [focus, setFocus] = useState(false);
 
   return (
-    <InputContainer focus={focus}>
+    <InputContainer focus={focus} {...rest} pl={6} pt={2} pb={2}>
       <InputLabel>{String(label).toUpperCase()}</InputLabel>
 
       <InputText
-        {...rest}
+        placeholder={placeholder}
         onFocus={() => setFocus(true)}
         onEndEditing={() => setFocus(false)}
       />

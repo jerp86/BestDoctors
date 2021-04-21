@@ -1,14 +1,13 @@
 import styled from 'styled-components/native';
 
-export const InputContainer = styled.View`
+import { BaseContainer } from '~/components/atoms/Container';
+
+export const InputContainer = styled(BaseContainer)`
   align-items: flex-start;
   justify-content: flex-start;
 
   width: ${({ theme }) => theme.metrics.baseWidth}px;
   height: ${({ theme }) => theme.metrics.px(56)}px;
-
-  padding-horizontal: ${({ theme }) => theme.metrics.px(8)}px;
-  padding-vertical: ${({ theme }) => theme.metrics.px(6)}px;
 
   border-radius: ${({ theme }) => theme.metrics.px(8)}px;
   border-width: ${({ theme, focus }) => theme.metrics.px(focus ? 2 : 1)}px;
