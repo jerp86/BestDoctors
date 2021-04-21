@@ -1,14 +1,23 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { CardContainer, CheckCircle, CheckView, TextView } from './styles';
 
 import { CardTitle, RegularText } from '../../atoms';
 
+import { theme } from '~/styles/theme';
+
 export const SelectTypeCard = ({ selected, title, description, ...rest }) => {
   return (
     <CardContainer selected={selected} {...rest}>
       <CheckView>
-        <CheckCircle selected={selected} />
+        <CheckCircle selected={selected}>
+          <Icon
+            name="check"
+            color={theme.colors.greyLight}
+            size={theme.metrics.px(16)}
+          />
+        </CheckCircle>
       </CheckView>
 
       <TextView>

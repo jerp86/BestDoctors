@@ -37,6 +37,9 @@ export const TextView = styled.View`
 `;
 
 export const CheckCircle = styled.View`
+  align-items: center;
+  justify-content: center;
+
   width: ${({ theme }) => theme.metrics.px(24)}px;
   height: ${({ theme }) => theme.metrics.px(24)}px;
 
