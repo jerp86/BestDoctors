@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import {
   ConfirmPhoneScreen,
   CreateAccountScreen,
+  CreateAccountSuccessScreen,
   LoginScreen,
   SelectAccountTypeScreen,
   SplashScreen,
@@ -22,6 +23,10 @@ export const AuthNavigator = () => {
         component={SelectAccountTypeScreen}
       />
       <Stack.Screen name="ConfirmPhone" component={ConfirmPhoneScreen} />
+      <Stack.Screen
+        name="CreateAccountSuccess"
+        component={CreateAccountSuccessScreen}
+      />
     </Stack.Navigator>
   );
 };
