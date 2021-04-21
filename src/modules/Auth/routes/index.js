@@ -2,6 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import {
+  ConfirmPhoneScreen,
   CreateAccountScreen,
   LoginScreen,
   SelectAccountTypeScreen,
@@ -20,6 +21,7 @@ export const AuthNavigator = () => {
         name="SelectAccountType"
         component={SelectAccountTypeScreen}
       />
+      <Stack.Screen name="ConfirmPhone" component={ConfirmPhoneScreen} />
     </Stack.Navigator>
   );
 };
