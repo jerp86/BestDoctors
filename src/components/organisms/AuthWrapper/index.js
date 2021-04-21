@@ -1,21 +1,25 @@
 import React from 'react';
 
-import { Container } from './styles';
-
 import { Title } from '~/components/atoms';
+
+import { ButtonContainer, Container, ContentContainer } from './styles';
 
 import background from '~/assets/img/auth_background.png';
 
-export const AuthWrapper = ({ children, title }) => {
+export const AuthWrapper = ({ children, title, bottomChildren }) => {
   return (
     <Container source={background}>
-      {title && (
-        <Title w="100%" mb={64}>
-          {title}
-        </Title>
-      )}
+      <ContentContainer>
+        {title && (
+          <Title w="100%" mb={48}>
+            {title}
+          </Title>
+        )}
 
-      {children}
+        {children}
+      </ContentContainer>
+
+      <ButtonContainer>{bottomChildren}</ButtonContainer>
     </Container>
   );
 };
