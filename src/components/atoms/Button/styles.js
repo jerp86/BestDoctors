@@ -1,6 +1,8 @@
 import styled from 'styled-components/native';
 
-export const ButtonContainer = styled.TouchableOpacity`
+import { BaseTouchContainer } from '../Container';
+
+export const ButtonContainer = styled(BaseTouchContainer)`
   background-color: ${({ theme, outline }) =>
     outline ? theme.colors.background : theme.colors.primary};
 
