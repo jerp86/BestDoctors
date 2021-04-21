@@ -4,9 +4,9 @@ import { CardContainer, CheckCircle, CheckView, TextView } from './styles';
 
 import { CardTitle, RegularText } from '../../atoms';
 
-export const SelectTypeCard = ({ selected, title, description }) => {
+export const SelectTypeCard = ({ selected, title, description, ...rest }) => {
   return (
-    <CardContainer selected={selected}>
+    <CardContainer selected={selected} {...rest}>
       <CheckView>
         <CheckCircle selected={selected} />
       </CheckView>

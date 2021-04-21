@@ -1,6 +1,8 @@
 import styled from 'styled-components/native';
 
-export const CardContainer = styled.TouchableOpacity`
+import { BaseTouchContainer } from '../../atoms/Container';
+
+export const CardContainer = styled(BaseTouchContainer)`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
