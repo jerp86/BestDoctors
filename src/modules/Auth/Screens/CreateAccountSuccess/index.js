@@ -10,7 +10,8 @@ export const CreateAccountSuccessScreen = ({ navigation }) => {
   const goToLogin = () => navigation.navigate('Login');
 
   return (
-    <AuthWrapper bottomChildren={<Button onPress={goToLogin}>PRÓXIMO</Button>}>
+    <AuthWrapper
+      bottomChildren={<Button onPress={goToLogin}>ACESSAR O APP</Button>}>
       <Container>
         <SuccessImg source={checkImg} />
         <Title mt={16} align="center">
