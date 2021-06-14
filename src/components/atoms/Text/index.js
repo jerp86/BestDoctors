@@ -42,3 +42,9 @@ export const InputLabel = styled(BaseText)`
   padding: 0;
   margin: 0;
 `;
+
+export const ErrorLabel = styled(BaseText)`
+  font-family: ${({ theme }) => theme.fonts.regular};
+  font-size: ${({ theme }) => theme.metrics.px(12)}px;
+  color: ${({ theme }) => theme.colors.red};
+`;
